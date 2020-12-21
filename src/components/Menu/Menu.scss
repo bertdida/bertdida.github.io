@@ -1,0 +1,21 @@
+.menu {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__listItem {
+    text-transform: lowercase;
+    font-size: 1.2rem;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
