@@ -1,5 +1,6 @@
 .footer {
   &__inner {
+    height: 80px;
     display: flex;
 
     @media only screen and (min-width: 600px) {
@@ -9,7 +10,6 @@
 
   .menu {
     width: 100%;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
 
