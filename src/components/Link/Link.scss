@@ -1,4 +1,7 @@
 .link {
+  --accent: #ffeb6c;
+  --accent-hover: #f7d708;
+
   text-decoration: none;
   color: inherit;
   position: relative;
@@ -14,8 +17,14 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #f7d708;
+    background-color: var(--accent);
     height: 0.625em;
     width: 100%;
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--accent-hover);
+    }
   }
 }
