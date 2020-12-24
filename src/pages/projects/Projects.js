@@ -11,6 +11,12 @@ export function Projects() {
       </Helmet>
 
       <section className="projects">
+        <p>
+          Currently, most of these side-projects are using Heroku free-tier as a
+          hosting service. It might take some time to load when you visit its
+          page.
+        </p>
+
         <ul className="projects__list">
           {projects.map((project, index) => (
             <li className="projects__listItem" key={index}>
@@ -29,40 +35,23 @@ function Project({ project }) {
   return (
     <div className="project">
       <div className="project__logo">{logo}</div>
-      <div className="project__spacer project__spacer--sm" />
 
       {title}
-      <div className="project__spacer project__spacer--sm" />
-
-      <ProjectTags tags={tags} />
-      <div className="project__spacer" />
+      <HorizontalList items={tags} />
 
       {description}
       <div className="project__divider" />
-
-      <ProjectLinks links={links} />
+      <HorizontalList items={links} />
     </div>
   );
 }
 
-function ProjectTags({ tags }) {
+function HorizontalList({ items }) {
   return (
-    <ul className="tags">
-      {tags.map((tag, index) => (
-        <li className="tags__item" key={index}>
-          {tag}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function ProjectLinks({ links }) {
-  return (
-    <ul className="links">
-      {links.map((link, index) => (
-        <li className="links__item" key={index}>
-          {link}
+    <ul className="horizontalList">
+      {items.map((item, index) => (
+        <li className="horizontalList__item" key={index}>
+          {item}
         </li>
       ))}
     </ul>
