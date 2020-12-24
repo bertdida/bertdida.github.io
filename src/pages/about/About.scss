@@ -7,13 +7,9 @@
     align-items: flex-start;
   }
 
-  &__profile {
+  &__picture {
     width: 100px;
     height: 100px;
-  }
-
-  &__title {
-    margin: 0;
   }
 
   &__text {
@@ -21,15 +17,10 @@
       padding-left: 30px;
       position: relative;
       top: -9px;
+
+      .about__intro {
+        margin-top: 0;
+      }
     }
-  }
-
-  &__description {
-    margin: 0;
-  }
-
-  .spacer {
-    height: 20px;
-    display: block;
   }
 }
