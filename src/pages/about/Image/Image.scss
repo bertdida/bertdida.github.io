@@ -1,0 +1,25 @@
+.image {
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+
+  &:not(.image--isLoading) {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__preview,
+  &::after {
+    width: inherit;
+    height: inherit;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5;
+  }
+}

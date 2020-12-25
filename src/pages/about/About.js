@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 
+import { Image } from "./Image";
 import { Link } from "components/Link";
 import profilePicture from "./assets/bertdida.jpeg";
 import "./About.scss";
@@ -12,7 +13,7 @@ export function About() {
       </Helmet>
 
       <section className="about">
-        <img className="about__picture" src={profilePicture} alt="bertdida" />
+        <Image size={100} src={profilePicture} alt="bertdida" />
 
         <div className="about__text">
           <h2 className="about__intro">
