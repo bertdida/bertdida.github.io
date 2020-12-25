@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-import { Link } from "../../components/Link";
+import { Link } from "components/Link";
 import "./Contact.scss";
 
 export function Contact() {

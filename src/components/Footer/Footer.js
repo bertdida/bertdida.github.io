@@ -3,8 +3,8 @@ import { ImStackoverflow, ImGithub } from "react-icons/im";
 import { GrLinkedin, GrSkype } from "react-icons/gr";
 import { FiCodepen } from "react-icons/fi";
 
-import { Menu, Item as MenuItem } from "../Menu";
-import { Container } from "../Container";
+import { Menu, Item as MenuItem } from "components/Menu";
+import { Container } from "components/Container";
 import "./Footer.scss";
 
 export function Footer() {

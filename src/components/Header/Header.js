@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
-import { Menu, Item } from "../Menu";
-import { Container } from "../Container";
+import { Menu, Item } from "components/Menu";
+import { Container } from "components/Container";
 import "./Header.scss";
 
 export function Header() {
