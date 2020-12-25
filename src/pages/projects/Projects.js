@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-import { projects } from "./data";
+import { projects } from "./assets/data";
 import "./Projects.scss";
 
 export function Projects() {

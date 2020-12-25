@@ -1,4 +1,4 @@
-import { ExternalLink } from "./ExternalLink";
+import { ExternalLink } from "../ExternalLink";
 import { DevJobsPhIcon, DeclareThatColorIcon, DevQuotesIcon } from "./icons";
 
 export const projects = [
