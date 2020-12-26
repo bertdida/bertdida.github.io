@@ -36,7 +36,7 @@ function Project({ project }) {
     <div className="project">
       <div className="project__logo">{logo}</div>
 
-      {title}
+      <div className="project__title">{title}</div>
       <HorizontalList items={tags} />
 
       {description}
