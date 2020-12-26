@@ -17,7 +17,7 @@ export function About() {
 
         <div className="about__text">
           <h2 className="about__intro">
-            Kamusta! I'm Herbert Verdida, a Software Developer based in the
+            Kamusta! I'm Herbert Verdida, a Software Developer from the
             Philippines.
           </h2>
 
