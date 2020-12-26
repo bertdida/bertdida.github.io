@@ -2,6 +2,7 @@
   --accent: #ffeb6c;
   --accent-hover: #f7d708;
 
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   position: relative;
@@ -10,6 +11,10 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+
+    & > * {
+      display: inline;
+    }
   }
 
   &::after {
