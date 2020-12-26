@@ -11,7 +11,7 @@ export function Projects() {
       </Helmet>
 
       <section className="projects">
-        <p>
+        <p className="projects__note">
           Currently, most of these side-projects are using Heroku free-tier as a
           hosting service. It might take some time to load when you visit its
           page.
