@@ -1,0 +1,2 @@
+.link{--accent:#ffeb6c;--accent-hover:#f7d708;text-decoration:none;color:inherit}.link,.link__children{display:inline-block;position:relative}.link__children{z-index:1}.link__children>*{display:inline}.link:after{content:"";position:absolute;left:0;bottom:0;background-color:var(--accent);height:.625em;width:100%}.link:hover:after{background-color:var(--accent-hover)}.contact__title{margin-top:0}
+/*# sourceMappingURL=5.2a737bc6.chunk.css.map */
