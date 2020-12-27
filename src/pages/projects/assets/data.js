@@ -11,14 +11,18 @@ export const projects = [
     logo: <DevJobsPhIcon />,
     description: (
       <>
-        <p>A job aggregator for Filipino developers.</p>
         <p>
-          Built with the MERN stack, this project aims to help developers save
-          time finding a remote job in the industry.
+          DevJobsPh consolidates Software Development jobs from multiple job
+          posting sites in the Philippines.
+        </p>
+        <p>
+          It does this by utilizing axios, cheerio, Puppeteer, and MongoDB to
+          gather and store data — which are then served by Express.js + React
+          app.
         </p>
       </>
     ),
-    tags: ["Express", "MongoDB", "React", "Scraping"],
+    tags: ["MERN", "React Bootstrap", "Web Scraping", "API Development"],
     links: [
       <ExternalLink to="https://github.com/bertdida/devjobsph">
         GitHub
@@ -34,28 +38,39 @@ export const projects = [
     logo: <DeclareThatColorIcon />,
     description: (
       <>
-        <p>A tool that gives CSS hex codes an awesome name.</p>
         <p>
           Inspired by&nbsp;
           <ExternalLink to="https://chir.ag/projects/name-that-color">
             Chirag Mehta's name that color tool
           </ExternalLink>
-          , I built a Sublime Text 3 plugin that helps developers convert CSS
-          hex codes to their human-readable names. This idea became a&nbsp;
-          <ExternalLink to="http://declarethatcolor.herokuapp.com">
-            web app
+          , DeclareThatColor is a Sublime Text 3 plugin that aims to help
+          developers define CSS hex codes to their human-readable color names.
+        </p>
+
+        <p>
+          It was mentioned in the CSS-Tricks article,&nbsp;
+          <ExternalLink to="https://css-tricks.com/what-do-you-name-color-variables">
+            What do you name color variables?
           </ExternalLink>
-          &nbsp;also built on Flask and React.
+          , and currently has 100+ installations on packagecontrol.io.
+        </p>
+        <p>
+          Using Flask and React, I also built a web app version of this project
+          — check it live&nbsp;
+          <ExternalLink to="https://declarethatcolor.herokuapp.com">
+            here
+          </ExternalLink>
+          .
         </p>
       </>
     ),
-    tags: ["Flask", "React", "Regex"],
+    tags: ["Regex", "Plugin Development", "Flask", "React"],
     links: [
       <ExternalLink to="https://github.com/bertdida/declare-that-color-st3">
         GitHub - ST3
       </ExternalLink>,
       <ExternalLink to="https://github.com/bertdida/declare-that-color-web">
-        GitHub - web app
+        GitHub - web
       </ExternalLink>,
     ],
   },
@@ -83,7 +98,15 @@ export const projects = [
         </p>
       </>
     ),
-    tags: ["Flask", "PostgreSQL", "React", "Material-Ui", "Firebase", "PWA"],
+    tags: [
+      "Flask",
+      "PostgreSQL",
+      "React",
+      "Material-Ui",
+      "Firebase",
+      "PWA",
+      "API Development",
+    ],
     links: [
       <ExternalLink to="https://github.com/bertdida/devquotes-react">
         GitHub - frontend
