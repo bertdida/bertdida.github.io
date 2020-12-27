@@ -22,7 +22,13 @@ export const projects = [
         </p>
       </>
     ),
-    tags: ["MERN", "React Bootstrap", "Web Scraping", "API Development"],
+    tags: [
+      "MERN Stack",
+      "React Bootstrap",
+      "CRON",
+      "Web Scraping",
+      "API Development",
+    ],
     links: [
       <ExternalLink to="https://github.com/bertdida/devjobsph">
         GitHub
@@ -55,7 +61,7 @@ export const projects = [
           , and currently has 100+ installations on packagecontrol.io.
         </p>
         <p>
-          Using Flask and React, I also built a web app version of this project
+          I also built a web app version of this project, using Flask and React
           — check it live&nbsp;
           <ExternalLink to="https://declarethatcolor.herokuapp.com">
             here
