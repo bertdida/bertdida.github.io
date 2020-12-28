@@ -43,10 +43,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
 
   &__item {
     font-size: 14px;
+    display: inline-block;
 
     &:not(:last-child) {
       &::after {
