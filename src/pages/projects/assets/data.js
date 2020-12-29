@@ -90,17 +90,17 @@ export const projects = [
     description: (
       <>
         <p>
-          Using&nbsp;
+          DevQuotes is a random quote generator built specifically for Software
+          Developers — it's a follow-up to my&nbsp;
           <ExternalLink to="https://github.com/bertdida/twitter-quote-scraper">
             TwitterQuoteScraper
           </ExternalLink>
-          , I was able to gather 800+ quotations, and I thought it would be a
-          good idea to use these data for my next side-project.
+          &nbsp;project.
         </p>
         <p>
           This project allowed me to explore technologies such as Progressive
-          Web Apps, Firebase authentication, and Amazon Elasticsearch Service. A
-          fun and challenging learning experience.
+          Web Apps, Firebase authentication, JSON Web Token, and Amazon
+          Elasticsearch Service.
         </p>
       </>
     ),
