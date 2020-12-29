@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f479ed3d.chunk.css",
+    "main.css": "/static/css/main.235cd3e8.chunk.css",
     "main.js": "/static/js/main.ad4bfbed.chunk.js",
     "main.js.map": "/static/js/main.ad4bfbed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.55cd8780.js",
@@ -22,7 +22,7 @@
     "static/css/3.e09a27df.chunk.css.map": "/static/css/3.e09a27df.chunk.css.map",
     "static/css/4.2a737bc6.chunk.css.map": "/static/css/4.2a737bc6.chunk.css.map",
     "static/css/5.13818957.chunk.css.map": "/static/css/5.13818957.chunk.css.map",
-    "static/css/main.f479ed3d.chunk.css.map": "/static/css/main.f479ed3d.chunk.css.map",
+    "static/css/main.235cd3e8.chunk.css.map": "/static/css/main.235cd3e8.chunk.css.map",
     "static/js/2.c50b341c.chunk.js.LICENSE.txt": "/static/js/2.c50b341c.chunk.js.LICENSE.txt",
     "static/media/bertdida.3782e125.jpeg": "/static/media/bertdida.3782e125.jpeg",
     "static/media/declarethatcolor.3c84bfba.svg": "/static/media/declarethatcolor.3c84bfba.svg",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.55cd8780.js",
     "static/js/2.c50b341c.chunk.js",
-    "static/css/main.f479ed3d.chunk.css",
+    "static/css/main.235cd3e8.chunk.css",
     "static/js/main.ad4bfbed.chunk.js"
   ]
 }
