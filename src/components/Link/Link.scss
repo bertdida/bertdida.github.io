@@ -1,35 +1,24 @@
 .link {
   --accent: #ffeb6c;
-  --accent-hover: #f7d708;
 
   display: inline-block;
   text-decoration: none;
   color: inherit;
   position: relative;
 
+  &:hover {
+    --accent: #f7d708;
+  }
+
   &__children {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 60%,
+      var(--accent) 0
+    );
 
     & > * {
       display: inline;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: var(--accent);
-    height: 0.625em;
-    width: 100%;
-  }
-
-  &:hover {
-    &::after {
-      background-color: var(--accent-hover);
     }
   }
 }
