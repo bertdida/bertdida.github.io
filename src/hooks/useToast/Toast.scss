@@ -1,0 +1,46 @@
+.toast {
+  &Container {
+    --bottom-gap: 20px;
+
+    position: fixed;
+    bottom: var(--bottom-gap);
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+
+  margin: auto;
+  margin-bottom: 5px;
+  max-width: 700px;
+
+  &-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  &__content {
+    background-color: #f7d708;
+    padding: 10px 1rem;
+
+    @media only screen and (min-width: 600px) {
+      max-width: 300px;
+    }
+  }
+}
