@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { Menu, Item } from "components/Menu";
@@ -8,12 +9,7 @@ export function Header() {
   return (
     <header className="header">
       <Container className="header__inner">
-        <Link to="/" className="title">
-          <h1>
-            <span className="title--short">bertdida</span>
-            <span className="title--long">herbert verdida</span>
-          </h1>
-        </Link>
+        <Title />
         <Menu>
           <MenuItem to="/">About</MenuItem>
           <MenuItem to="/projects">Projects</MenuItem>
@@ -21,6 +17,32 @@ export function Header() {
         </Menu>
       </Container>
     </header>
+  );
+}
+
+function Title() {
+  const title = useRef();
+
+  function onHover() {
+    const { current } = title;
+    current.dataset.content = current.textContent;
+    current.textContent = "herbert verdida";
+  }
+
+  function onHoverOut() {
+    const { current } = title;
+    current.textContent = current.dataset.content;
+  }
+
+  return (
+    <Link
+      to="/"
+      className="title"
+      onMouseEnter={onHover}
+      onMouseLeave={onHoverOut}
+    >
+      <h1 ref={title}>bertdida</h1>
+    </Link>
   );
 }
 

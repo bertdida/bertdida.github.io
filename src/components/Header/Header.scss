@@ -63,18 +63,4 @@
     margin: 0;
     font-size: 18px;
   }
-
-  &--long {
-    display: none;
-  }
-
-  &:hover {
-    .title--long {
-      display: block;
-    }
-
-    .title--short {
-      display: none;
-    }
-  }
 }
