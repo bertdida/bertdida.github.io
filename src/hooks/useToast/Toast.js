@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { createPortal } from "react-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -47,7 +47,7 @@ function ToastContainer({ children }) {
 }
 
 function Toast({ message, remove }) {
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = React.useState(false);
   const rootRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -73,6 +73,10 @@ function Toast({ message, remove }) {
       classNames="toast"
       unmountOnExit
       onExited={remove}
+      /**
+       * Fixes Warning: findDOMNode is deprecated in StrictMode issue
+       * https://github.com/reactjs/react-transition-group/issues/668#issuecomment-695162879
+       */
       nodeRef={rootRef}
     >
       <div ref={rootRef} className="toast">
