@@ -5,9 +5,12 @@ import { FiCodepen } from "react-icons/fi";
 
 import { Menu, Item as MenuItem } from "components/Menu";
 import { Container } from "components/Container";
+import { useOnClickEmail } from "hooks/useOnClickEmail";
 import "./Footer.scss";
 
 export function Footer() {
+  const onClickEmail = useOnClickEmail();
+
   return (
     <footer className="footer">
       <Container className="footer__inner">
@@ -16,6 +19,7 @@ export function Footer() {
             href="mailto:bertdida@gmail.com"
             aria-label="gmail.com"
             title="gmail.com"
+            onClick={onClickEmail}
             active
           >
             <AiFillMail />

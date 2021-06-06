@@ -1,25 +1,11 @@
 import { Helmet } from "react-helmet-async";
 
 import { Link } from "components/Link";
-import { useToast } from "hooks/useToast";
+import { useOnClickEmail } from "hooks/useOnClickEmail";
 import "./Contact.scss";
 
-const emojis = ["🤘", "🚀", "🙌", "👍", "🦄", "📋", "🍻", "🍕", "✅", "🍩"];
-let emojiIndex = 0;
-
 export function Contact() {
-  const { toasts, addToast } = useToast();
-
-  function onClickEmail(event) {
-    event.preventDefault();
-    if (toasts.length) return;
-
-    navigator.clipboard.writeText(event.target.textContent);
-
-    emojiIndex = emojiIndex >= emojis.length ? 0 : emojiIndex;
-    addToast(`${emojis[emojiIndex]} Email copied to clipboard!`);
-    emojiIndex++;
-  }
+  const onClickEmail = useOnClickEmail();
 
   return (
     <>
@@ -46,6 +32,7 @@ export function Contact() {
             target="_blank"
             rel="noreferrer"
             isExternal
+            onClick={onClickEmail}
           >
             LinkedIn
           </Link>
