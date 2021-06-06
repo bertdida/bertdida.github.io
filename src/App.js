@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -8,20 +8,6 @@ import { Container } from "./components/Container";
 import { Routes } from "./Routes";
 import { ToastProvider, useToast } from "./hooks/useToast";
 import "./App.scss";
-
-const isPrefersDarkMode =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-if (isPrefersDarkMode) {
-  document.body.dataset.scheme = "dark";
-}
-
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (event) => {
-    document.body.dataset.scheme = event.matches ? "dark" : "light";
-  });
 
 function App() {
   return (
@@ -37,14 +23,36 @@ function App() {
   );
 }
 
+const isDarkSchemeDetected =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 function Main() {
   const { addToast } = useToast();
+  const [isDarkScheme, setIsDarkScheme] = useState(isDarkSchemeDetected);
 
   useEffect(() => {
-    if (isPrefersDarkMode) {
-      addToast("🐺 Okay, so you prefer dark mode.");
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        setIsDarkScheme(event.matches);
+      });
+  }, []);
+
+  useEffect(() => {
+    const localStorageKey = "bd.isSchemeToastShown";
+    document.body.dataset.scheme = isDarkScheme ? "dark" : "light";
+
+    if (!isDarkScheme) {
+      localStorage.removeItem(localStorageKey);
+      return;
     }
-  }, [addToast]);
+
+    if (localStorage.getItem(localStorageKey) === null) {
+      addToast("🐺 Okay, so you prefer dark mode.");
+      localStorage.setItem(localStorageKey, new Date().getTime());
+    }
+  }, [isDarkScheme, addToast]);
 
   return (
     <main className="main">
