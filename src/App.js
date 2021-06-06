@@ -8,6 +8,19 @@ import { Routes } from "./Routes";
 import { ToastProvider } from "./hooks/useToast";
 import "./App.scss";
 
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  document.body.dataset.scheme = "dark";
+}
+
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    document.body.dataset.scheme = event.matches ? "dark" : "light";
+  });
+
 function App() {
   return (
     <main className="main">
