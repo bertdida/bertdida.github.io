@@ -32,7 +32,6 @@ export function Contact() {
             target="_blank"
             rel="noreferrer"
             isExternal
-            onClick={onClickEmail}
           >
             LinkedIn
           </Link>
