@@ -16,36 +16,6 @@ export function Footer() {
       <Container className="footer__inner">
         <Menu>
           <MenuItem
-            href="mailto:bertdida@gmail.com"
-            aria-label="gmail.com"
-            title="gmail.com"
-            onClick={onClickEmail}
-            active
-          >
-            <AiFillMail />
-          </MenuItem>
-
-          <MenuItem
-            href="https://join.skype.com/invite/d7hlrQjyie0P"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="skype.com"
-            title="skype.com"
-          >
-            <GrSkype />
-          </MenuItem>
-
-          <MenuItem
-            href="https://www.linkedin.com/in/bertdida/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="linkedin.com"
-            title="linkedin.com"
-          >
-            <GrLinkedin />
-          </MenuItem>
-
-          <MenuItem
             href="https://github.com/bertdida"
             target="_blank"
             rel="noreferrer"
@@ -73,6 +43,36 @@ export function Footer() {
             title="stackoverflow.com"
           >
             <ImStackoverflow />
+          </MenuItem>
+
+          <MenuItem
+            href="https://www.linkedin.com/in/bertdida/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="linkedin.com"
+            title="linkedin.com"
+          >
+            <GrLinkedin />
+          </MenuItem>
+
+          <MenuItem
+            href="mailto:bertdida@gmail.com"
+            aria-label="gmail.com"
+            title="gmail.com"
+            onClick={onClickEmail}
+            active
+          >
+            <AiFillMail />
+          </MenuItem>
+
+          <MenuItem
+            href="https://join.skype.com/invite/d7hlrQjyie0P"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="skype.com"
+            title="skype.com"
+          >
+            <GrSkype />
           </MenuItem>
         </Menu>
       </Container>
