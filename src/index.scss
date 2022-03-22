@@ -1,16 +1,19 @@
 body {
+  --color-bg: #fff;
+  --color-fg: #333;
+
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #fff;
-  color: #333;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
 }
 
 body[data-scheme="dark"] {
-  background-color: #202124;
-  color: #e8eaed;
+  --color-bg: #202124;
+  --color-fg: #e8eaed;
 
   .link__children {
     background-image: linear-gradient(

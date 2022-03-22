@@ -45,7 +45,7 @@
 
     &__link {
       font-size: 16px;
-      color: inherit;
+      color: var(--color-fg, inherit);
     }
   }
 }
@@ -62,5 +62,6 @@
   h1 {
     margin: 0;
     font-size: 18px;
+    color: var(--color-fg, inherit);
   }
 }
