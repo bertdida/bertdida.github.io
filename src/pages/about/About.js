@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 import { Link } from "components/Link";
-import profilePicture from "./assets/bertdida.jpeg";
+import profilePicture from "./assets/bertdida.jpg";
 import "./About.scss";
 
 export function About() {
