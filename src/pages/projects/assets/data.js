@@ -58,7 +58,7 @@ export const projects = [
           <ExternalLink to="https://css-tricks.com/what-do-you-name-color-variables">
             What do you name color variables?
           </ExternalLink>
-          , and currently has 100+ installations on packagecontrol.io.
+          , and currently has 150+ installations on packagecontrol.io.
         </p>
         <p>
           I also built a web app version of this project, using Flask and React
