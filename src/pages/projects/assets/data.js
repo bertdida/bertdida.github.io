@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     title: (
-      <ExternalLink to="http://devquotes.netlify.com">
+      <ExternalLink to="https://devquotes-react.vercel.app">
         <h3>DevQuotes</h3>
       </ExternalLink>
     ),
