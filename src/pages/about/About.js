@@ -21,9 +21,9 @@ export function About() {
           </h2>
 
           <p>
-            I primarily use PHP, Python, and JavaScript in implementing
-            server-side logic and visual elements that users interact with
-            within the application.
+            I primarily use JavaScript/TypeScript in implementing server-side
+            logic and visual elements that users interact with within the
+            application.
           </p>
 
           <p>
