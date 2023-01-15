@@ -21,9 +21,15 @@ export function About() {
           </h2>
 
           <p>
-            I primarily use JavaScript/TypeScript in implementing server-side
-            logic and visual elements that users interact with within the
-            application.
+            I am an expert in using the&nbsp;
+            <abbr title="MongoDB, Express, React, and Node.js">MERN</abbr>
+            &nbsp;stack in implementing server-side logic and visual elements
+            that users interact with within the application.
+          </p>
+
+          <p>
+            My skillset also includes extensive experience in working with PHP,
+            Python, and SQL databases.
           </p>
 
           <p>
