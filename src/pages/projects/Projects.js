@@ -11,12 +11,6 @@ export function Projects() {
       </Helmet>
 
       <section className="projects">
-        <p className="projects__note">
-          Currently, most of these side-projects are using Heroku free-tier as a
-          hosting service. It might take some time to load when you visit its
-          page.
-        </p>
-
         <ul className="projects__list">
           {projects.map((project, index) => (
             <li className="projects__listItem" key={index}>

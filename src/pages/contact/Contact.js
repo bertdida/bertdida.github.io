@@ -17,8 +17,9 @@ export function Contact() {
         <h2 className="contact__title">Let's work together.</h2>
 
         <p>
-          I'm available for interesting freelance work or projects. The best way
-          to contact me is to shoot me an email at&nbsp;
+          I am open to engaging in exciting freelance opportunities and
+          projects. If you are interested in working with me, the most efficient
+          way to reach me is by sending an email to&nbsp;
           <Link
             isExternal
             to="mailto:bertdida@gmail.com"
@@ -26,17 +27,10 @@ export function Contact() {
           >
             bertdida@gmail.com
           </Link>
-          &nbsp;or DM me on&nbsp;
-          <Link
-            to="https://www.linkedin.com/in/bertdida"
-            target="_blank"
-            rel="noreferrer"
-            isExternal
-          >
-            LinkedIn
-          </Link>
           .
         </p>
+
+        <p>I look forward to hearing from you.</p>
       </section>
     </>
   );
