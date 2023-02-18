@@ -1,6 +1,6 @@
 import { AiFillMail } from "react-icons/ai";
 import { ImStackoverflow, ImGithub } from "react-icons/im";
-import { GrLinkedin, GrSkype } from "react-icons/gr";
+import { GrSkype } from "react-icons/gr";
 import { FiCodepen } from "react-icons/fi";
 
 import { Menu, Item as MenuItem } from "components/Menu";
@@ -43,16 +43,6 @@ export function Footer() {
             title="stackoverflow.com"
           >
             <ImStackoverflow />
-          </MenuItem>
-
-          <MenuItem
-            href="https://www.linkedin.com/in/bertdida/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="linkedin.com"
-            title="linkedin.com"
-          >
-            <GrLinkedin />
           </MenuItem>
 
           <MenuItem
