@@ -1,11 +1,20 @@
 import { useRef } from "react";
+import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
+import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
 
 import { Menu, Item } from "components/Menu";
 import { Container } from "components/Container";
 import "./Header.scss";
 
-export function Header() {
+Header.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+  isDarkScheme: PropTypes.bool,
+};
+
+export function Header(props) {
+  const ButtonIcon = props.isDarkScheme ? IoSunnySharp : IoMoonSharp;
+
   return (
     <header className="header">
       <Container className="header__inner">
@@ -14,6 +23,14 @@ export function Header() {
           <MenuItem to="/">About</MenuItem>
           <MenuItem to="/projects">Projects</MenuItem>
           <MenuItem to="/contact">Contact</MenuItem>
+          <Item
+            as="button"
+            className="menu__button"
+            onClick={props.toggleTheme}
+            title="Toggle theme"
+          >
+            <ButtonIcon size={18} style={{ color: "var(--color-fg)" }} />
+          </Item>
         </Menu>
       </Container>
     </header>

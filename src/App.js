@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -23,40 +23,69 @@ function App() {
   );
 }
 
-const isDarkSchemeDetected =
+const StorageKey = {
+  Theme: "bd.theme",
+  IsSchemeToastShown: "bd.isSchemeToastShown",
+};
+
+// This has value when the user clicks the toggle button.
+const userTheme = localStorage.getItem(StorageKey.Theme);
+
+let isDarkSchemeDetected =
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if (userTheme === "light") {
+  isDarkSchemeDetected = false;
+}
 
 function Main() {
   const { addToast } = useToast();
   const [isDarkScheme, setIsDarkScheme] = useState(isDarkSchemeDetected);
 
-  useEffect(() => {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        setIsDarkScheme(event.matches);
-      });
+  const onChangeSystemTheme = useCallback((event) => {
+    setIsDarkScheme(event.matches);
   }, []);
 
   useEffect(() => {
-    const localStorageKey = "bd.isSchemeToastShown";
+    if (userTheme === null) {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", onChangeSystemTheme);
+    }
+
+    return function cleanUp() {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", onChangeSystemTheme);
+    };
+  }, [onChangeSystemTheme]);
+
+  useEffect(() => {
     document.body.dataset.scheme = isDarkScheme ? "dark" : "light";
 
     if (!isDarkScheme) {
-      localStorage.removeItem(localStorageKey);
+      localStorage.removeItem(StorageKey.IsSchemeToastShown);
       return;
     }
 
-    if (localStorage.getItem(localStorageKey) === null) {
+    if (localStorage.getItem(StorageKey.IsSchemeToastShown) === null) {
       addToast("🐺 Okay, so you prefer dark mode.");
-      localStorage.setItem(localStorageKey, new Date().getTime());
+      localStorage.setItem(StorageKey.IsSchemeToastShown, new Date().getTime());
     }
   }, [isDarkScheme, addToast]);
 
+  function toggleTheme() {
+    setIsDarkScheme((prevState) => {
+      const nextState = !prevState;
+      localStorage.setItem(StorageKey.Theme, nextState ? "dark" : "light");
+      return nextState;
+    });
+  }
+
   return (
     <main className="main">
-      <Header />
+      <Header toggleTheme={toggleTheme} isDarkScheme={isDarkScheme} />
       <Container>
         <Routes />
       </Container>

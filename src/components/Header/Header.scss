@@ -47,6 +47,15 @@
       font-size: 16px;
       color: var(--color-fg, inherit);
     }
+
+    &__button {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      height: 100%;
+      width: 45px;
+    }
   }
 }
 
