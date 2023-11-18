@@ -21,13 +21,12 @@
   }
 
   &__logo {
-    --size: 30px;
-
+    --width: 30px;
     display: flex;
 
     svg {
-      width: var(--size);
-      height: var(--size);
+      width: var(--width);
+      height: var(--height, auto);
     }
   }
 
