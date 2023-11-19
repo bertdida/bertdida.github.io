@@ -34,8 +34,13 @@ function Project({ project }) {
       <HorizontalList items={tags} />
 
       {description}
-      <div className="project__divider" />
-      <HorizontalList items={links} />
+
+      {Array.isArray(links) && links.length > 0 && (
+        <>
+          <div className="project__divider" />
+          <HorizontalList items={links} />
+        </>
+      )}
     </div>
   );
 }

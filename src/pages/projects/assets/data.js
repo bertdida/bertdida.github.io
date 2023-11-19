@@ -85,8 +85,7 @@ export const projects = [
     description: (
       <>
         <p>
-          Rising NFT is a collection of 1,120 unique digital artworks based on
-          &nbsp;
+          Rising NFT is a collection of 1,120 unique digital artworks based on{" "}
           <ExternalLink to="https://www.justinhammerart.com/">
             Justin Hammer
           </ExternalLink>
@@ -94,9 +93,9 @@ export const projects = [
         </p>
         <p>
           This project marked my introduction to web3 development. In my role, I
-          handled a range of responsibilities such as deploying a smart contract
-          using Hardhat, integrating the MetaMask wallet, interacting with the
-          smart contract, and transforming wireframes into a React app.
+          handled a range of responsibilities such as deploying a smart
+          contract, integrating the MetaMask wallet, interacting with the smart
+          contract, and transforming wireframes into a React app.
         </p>
       </>
     ),
@@ -185,23 +184,12 @@ export const projects = [
           </ExternalLink>
           , and currently has 200+ installations on packagecontrol.io.
         </p>
-        <p>
-          I also built a web app version of this project, using Flask and React
-          — check it live&nbsp;
-          <ExternalLink to="https://declarethatcolor.herokuapp.com">
-            here
-          </ExternalLink>
-          .
-        </p>
       </>
     ),
     tags: ["Regex", "Plugin Development", "Flask", "React"],
     links: [
       <ExternalLink to="https://github.com/bertdida/declare-that-color-st3">
-        GitHub - ST3
-      </ExternalLink>,
-      <ExternalLink to="https://github.com/bertdida/declare-that-color-web">
-        GitHub - web
+        GitHub
       </ExternalLink>,
     ],
   },
