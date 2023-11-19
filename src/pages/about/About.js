@@ -16,20 +16,19 @@ export function About() {
 
         <div className="about__text">
           <h2 className="about__intro">
-            Kumusta! I'm Herbert Verdida, a Software Developer from the
+            Kumusta! I'm Herbert Verdida, a Software Developer based in the
             Philippines.
           </h2>
 
           <p>
-            I am an expert in using the&nbsp;
-            <abbr title="MongoDB, Express, React, and Node.js">MERN</abbr>
-            &nbsp;stack in implementing server-side logic and visual elements
-            that users interact with within the application.
+            I am an expert in using JavaScript and TypeScript for implementing
+            server-side logic and user-interactive visual elements within
+            applications.
           </p>
 
           <p>
-            My skillset also includes extensive experience in working with PHP,
-            Python, and SQL databases.
+            My skillset also includes extensive experience with PHP, Python, and
+            SQL databases.
           </p>
 
           <p>
