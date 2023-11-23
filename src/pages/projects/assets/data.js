@@ -77,7 +77,7 @@ export const projects = [
   },
   {
     title: (
-      <ExternalLink to="therisingnft.com">
+      <ExternalLink to="https://therisingnft.com">
         <h3>The Rising NFT</h3>
       </ExternalLink>
     ),
