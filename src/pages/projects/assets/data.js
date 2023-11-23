@@ -186,7 +186,7 @@ export const projects = [
         </p>
       </>
     ),
-    tags: ["Regex", "Plugin Development"],
+    tags: ["Python", "Regex", "Plugin Development"],
     links: [
       <ExternalLink to="https://github.com/bertdida/declare-that-color-st3">
         GitHub
